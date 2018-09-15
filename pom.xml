@@ -26,11 +26,5 @@
 			<artifactId>sqlite-jdbc</artifactId>
 			<version>3.23.1</version>
 		</dependency>
-		<!-- https://mvnrepository.com/artifact/io.ebean/ebean -->
-		<dependency>
-			<groupId>io.ebean</groupId>
-			<artifactId>ebean</artifactId>
-			<version>11.22.4</version>
-		</dependency>
 	</dependencies>
 </project>
