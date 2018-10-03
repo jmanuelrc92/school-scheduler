@@ -8,10 +8,11 @@ public class DatabaseUtils {
 	
 	public static Connection getConnection(String dbConnectionName) {
 		Connection databaseConnection = null;
-		String path = DatabaseUtils.getDatabasePath(dbConnectionName);
+		String path = null;
 		try {
+			path = "jdbc:sqlite:" + DatabaseUtils.getDatabasePath(dbConnectionName);
 			Class.forName("org.sqlite.JDBC");
-			databaseConnection = DriverManager.getConnection("jdbc:sqlite:"+path);
+			databaseConnection = DriverManager.getConnection(path);
 		} catch (ClassNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
