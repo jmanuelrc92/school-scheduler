@@ -10,4 +10,12 @@ public class ArrayUtils {
 		}
 		return implode.substring(0, implode.length() - 1);
 	}
+	
+	public static String mergeArrayElements(ArrayList<String> chocolate, ArrayList<String> milk, String mixer) {
+		ArrayList<String> chocolateMilk = new ArrayList<String>();
+		for (int i = 0; i < chocolate.size(); i ++) {
+			chocolateMilk.add(chocolate.get(i) + mixer + milk.get(i));
+		}
+		return ArrayUtils.mImplode(chocolateMilk, ",");
+	}
 }
